@@ -205,7 +205,14 @@ end
 
 #helping method
 def team_score(team_name)
+  total_score = 0 
+  game_hash.each{|home_away, teams_stat|
+    if team_name == teams_stat[:team_name]
+        return teams_stat[:colors]
+    end
+  }
 end
+
 def winning_team
 
 end
