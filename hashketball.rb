@@ -245,7 +245,18 @@ end
 
 #helping method
 def most_steals
-  
+  most_steals_stolen = 0
+  player_most_steals = ""
+  game_hash.each{|home_away, teams_stat|
+    teams_stat[:players].each{|player|
+      if player[:steals] > most_steals_stolen
+        most_steals_stolen = player[:steals]
+        player_most_steals = player[:player_name]
+      end
+    }
+  }
+  player_most_steals
 end
+
 def long_name_steals_a_ton? 
 end
