@@ -200,5 +200,6 @@ def most_points_scored
       end
     }
   }
+  pp player_most_points
   player_most_points
 end
