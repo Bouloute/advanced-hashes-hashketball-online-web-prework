@@ -218,7 +218,7 @@ end
 
 def winning_team
   winner_score = 0
-  winners = {}
+  winners = ""
   game_hash.each{|home_away, teams_stat|
     
     if winner_score > team_score(teams_stat[:team_name])
