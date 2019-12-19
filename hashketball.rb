@@ -191,15 +191,14 @@ end
 
 def most_points_scored
   most_points = 0
-  player_most_points = {}
+  player_most_points_name = {}
   game_hash.each{|home_away, teams_stat|
     teams_stat[:players].each{|player|
       if player[:points] > most_points
         most_points = player[:points]
-        player_most_points = player
+        player_most_points_name = player[:player_name]
       end
     }
   }
-  pp player_most_points
-  player_most_points
+  player_most_points_name
 end
