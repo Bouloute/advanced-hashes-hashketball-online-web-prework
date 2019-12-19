@@ -217,12 +217,14 @@ def team_score(team_name)
 end
 
 def winning_team
+  winner_score = 0
+  winners = {}
   game_hash.each{|home_away, teams_stat|
-  
-    if team_name == teams_stat[:team_name]
-      teams_stat[:players].each{|player|
-        total_score += player[:points]
-      }
+    
+    if winner_score > team_score(teams_stat[:team_name])
+      winner_score = team_score(teams_stat[:team_name])
+      winners = teams_stat[:team_name]
     end
   }
+  winners
 end
