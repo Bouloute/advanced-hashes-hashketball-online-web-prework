@@ -205,7 +205,6 @@ end
 
 #helping method
 def team_score(team_name)
-   puts "here"
   total_score = 0 
   game_hash.each{|home_away, teams_stat|
     if team_name == teams_stat[:team_name]
@@ -214,7 +213,6 @@ def team_score(team_name)
       }
     end
   }
-  puts total_score
   total_score
 end
 
