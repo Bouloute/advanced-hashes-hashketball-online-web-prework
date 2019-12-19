@@ -244,6 +244,6 @@ def player_with_longest_name
 end
 
 #helping method
-player_most_points_name
+def player_most_points_name
 def long_name_steals_a_ton? 
 end
