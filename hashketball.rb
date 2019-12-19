@@ -234,11 +234,11 @@ def player_with_longest_name
   player_longest_name = ""
   game_hash.each{|home_away, teams_stat|
     teams_stat[:players].each{|player|
-      if player[:player_name].length > most_points
-        most_points = player[:points]
-        player_most_points_name = player[:player_name]
+      if player[:player_name].length > name_length
+        name_length = player[:player_name].length
+        player_longest_name = player[:player_name]
       end
     }
   }
-  player_most_points_name
+  player_longest_name
 end
