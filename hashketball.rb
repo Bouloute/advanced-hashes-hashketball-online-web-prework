@@ -208,11 +208,21 @@ def team_score(team_name)
   total_score = 0 
   game_hash.each{|home_away, teams_stat|
     if team_name == teams_stat[:team_name]
-        return teams_stat[:colors]
+      teams_stat[:players].each{|player|
+        total_score += player[:points]
+      }
     end
   }
+  total_score
 end
 
 def winning_team
-
+  game_hash.each{|home_away, teams_stat|
+  
+    if team_name == teams_stat[:team_name]
+      teams_stat[:players].each{|player|
+        total_score += player[:points]
+      }
+    end
+  }
 end
