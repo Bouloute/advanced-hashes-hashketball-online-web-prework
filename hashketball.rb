@@ -188,3 +188,16 @@ def big_shoe_rebounds
   }
   rebounds
 end
+
+def most_points_scored
+  most_points = 0
+  game_hash.each{|home_away, teams_stat|
+    teams_stat[:players].each{|player|
+      if player[:shoe] > biggest_shoe_size
+        biggest_shoe_size = player[:shoe]
+        rebounds = player[:rebounds]
+      end
+    }
+  }
+  rebounds
+end
