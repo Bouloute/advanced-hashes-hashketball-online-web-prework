@@ -202,3 +202,10 @@ def most_points_scored
   }
   player_most_points_name
 end
+
+#helping method
+def team_score(team_name)
+end
+def winning_team
+
+end
