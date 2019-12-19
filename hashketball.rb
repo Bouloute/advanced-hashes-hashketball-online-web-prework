@@ -214,6 +214,7 @@ def team_score(team_name)
       }
     end
   }
+  puts total_score
   total_score
 end
 
