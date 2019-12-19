@@ -229,7 +229,7 @@ def winning_team
   winners
 end
 
-def most_points_scored
+def player_with_longest_name
   most_points = 0
   player_most_points_name = {}
   game_hash.each{|home_away, teams_stat|
